@@ -2,25 +2,21 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+  <meta name="keywords" content="Humanoid Robots, Human-Robot Interaction, Humanoid-Human-Object Interaction, Real-Time Reaction, Intention Prediction, Reactive Motion Control, Object Manipulation, Safety-Aware Robotics, Hierarchical Learning Framework, Human-Object-Human Data, Teleoperation Data">
+  <meta name="description" content="RHINO empowers humanoid robots to perform real-time human-object interactions. It combines hierarchical learning, multimodal intention prediction, and reactive motion control for safe, flexible, and adaptive collaboration with humans.">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- Baidu Analytics -->
   <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?d0ad4e00121817dc0fe2c6b7cbd6fd73";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>      
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -32,7 +28,8 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="icon" href="./static/images/icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -42,85 +39,64 @@
 </head>
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
-
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
 
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">RHINO: </h1>
+          <h1 class="title is-1 publication-title">Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://timerchen.github.io">Jingxiao Chen</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://github.com/lixinyao11">Xinyao Li</a><sup>*</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://scholar.google.com/citations?&user=ofpwpDYAAAAJ">Jiahang Cao</a><sup>*</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="https://zbzhu99.github.io/">Zhengbang Zhu</a>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://github.com/WentDong">Wentao Dong</a>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://minghuanliu.com/">Minghuan Liu</a><sup>†</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="https://yingwen.io/">Ying Wen</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://apex.sjtu.edu.cn/members/yyu">Yong Yu</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://bcmi.sjtu.edu.cn/~zhangliqing/">Liqing Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://wnzhang.net/">Weinan Zhang</a>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <!-- <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
+            <span class="author-block"><sup>2</sup>ByteDance Seed</span> -->
+            <span class="author-block">Shanghai Jiao Tong University</span>
           </div>
 
+          <div class="is-size-6 publication-authors">
+            <span class="author-block">* Equal Contribution</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <span class="author-block">† project lead</span>
+          </div>
+          <br>
+          <img src="./static/images/sjtu_logo.png" width="40%" style="margin-right: 20px;"> 
+          <img src="./static/images/apex_banner_gray.png" width="35%" style="margin-right: 0;"> 
+          <br>
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
+                <a href="https://google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -129,7 +105,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href="https://google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -139,7 +115,7 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <a href="https://google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
@@ -149,7 +125,7 @@
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href="https://google.com"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -159,13 +135,22 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
-                   class="external-link button is-normal is-rounded is-dark">
+                <a href="https://google.com"
+                   class="external-link button is-normal is-rounded is-dark" style="pointer-events: none; color: grey;">
                   <span class="icon">
-                      <i class="far fa-images"></i>
+                      <i class="fa fa-database"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Dataset</span>
                   </a>
+
+              </span>
+              <!-- <div class="col-auto" style="padding: 0 1px;">
+                <p class="mb-5"><a class="btn btn-large btn-light" href="javascript:void(0);" role="button" style="pointer-events: none; color: grey;">
+                    <i class="fa fa-database"></i> Dataset</a></p>
+              </div> -->
+              <br>
+              <br>
+              
             </div>
 
           </div>
@@ -175,11 +160,11 @@
   </div>
 </section>
 
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
+        <source src="./static/videos/web_g1_1.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
@@ -189,10 +174,87 @@
       </h2>
     </div>
   </div>
+</section> -->
+
+<section class="section">
+  <div class="container is-max-desktop">
+  <!-- Paper video. -->
+  <div class="columns is-centered has-text-centered">
+    <!-- <div class="column is-four-fifths"> -->
+      <div class="column is-full-width">
+      <!-- <h2 class="title is-3">Video</h2> -->
+      <!-- <div class="publication-video">
+        <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div> -->
+      <video muted="" autoplay loop="" playsinline="" controls="" src="./static/videos/demo_0131_compressed.mp4" width="100%" style="border-radius:10px; "></video>
+    </div>
+  </div>
+  <!--/ Paper video. -->
+  </div>
+</section>
+
+<!-- Main Scene -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Humanoid-Human-Object Interaction</h2>
+        <hr>
+        <!-- <tr>
+          <td>
+              <h2 class="subtitle">
+                  The robot is able to climb stairs upto 24cm high and only 30cm wide while climbing curbs upto 26cm high. Our policy generalizes to different stairs and curbs under a variety of lighting conditions. On out-of-distribution stairs and curbs, the robot initially gets stuck but is eventually able to traverse them using an emergent climbing up behavior.   
+              </h2>
+          </td>
+        </tr> -->
+          
+            <div class="row">
+              <div class="col">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Dining Waiter</h3>
+                  <video muted="" autoplay loop="" playsinline="" controls="" src="./static/videos/web_scene1.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Office Assistant</h3>
+                <video muted="" autoplay loop="" playsinline="" controls="" src="./static/videos/web_scene2.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+          
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- Long-Time Planning -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Long-Time Planning</h2>
+        <hr>
+        <!-- <tr>
+          <td>
+              <h2 class="subtitle">
+                  The robot is able to climb stairs upto 24cm high and only 30cm wide while climbing curbs upto 26cm high. Our policy generalizes to different stairs and curbs under a variety of lighting conditions. On out-of-distribution stairs and curbs, the robot initially gets stuck but is eventually able to traverse them using an emergent climbing up behavior.   
+              </h2>
+          </td>
+        </tr> -->
+          
+            <div class="row">
+              <div class="col">
+                  <video muted="" loop="" playsinline="" controls="" src="./static/videos/web_scene3.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+          
+      </div> 
+    </div>
+  </div>
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -247,208 +309,204 @@
       </div>
     </div>
   </div>
+</section> -->
+
+
+<!-- Unsafe -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Safe Supervision</h2>
+        <hr>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                  The robot is able to detect unsafe human behaviors and pause the task execution to ensure safety.
+              </h2>
+          </td>
+        </tr>
+        
+          
+            <div class="row">
+              <div class="col">
+                  <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_safe1.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_safe2.mp4" width="100%" style="border-radius:10px; "></video>
+            </div>
+            </div>
+            <br>
+          
+        
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- Intask interrupt -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">In-task Interruption</h2>
+        <div>
+        </div>
+        <hr>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                Robust manipulation skills allow robots to correctly respond to human interruptions when their intentions are unchanged.
+              </h2>
+          </td>
+        </tr>
+        
+          
+            <div class="row">
+              <div class="col">
+                  <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_in_task.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+          
+        
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- v.s. E2E -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Comparison to End-to-end Model</h2>
+        <hr>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                Our framework outperforms the end-to-end model for unseen human clothing or unexpected object arrangement.
+              </h2>
+          </td>
+        </tr>
+        <p class="text-center">
+            <div class="row">
+              <div class="col">
+                <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_e2e.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+          
+        
+      </div> 
+    </div>
+  </div>
+</section>
+
+<!-- Generalize to humanoids interaction -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Generalization: Humanoids Interaction</h2>
+        <hr>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                Our framework has potential to generalize and interact with humanoid robots.
+              </h2>
+          </td>
+        </tr>
+        
+          
+            <div class="row">
+              <div class="col">
+                  <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_g1_1.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_g1_2.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_g1_3.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+          
+        
+      </div> 
+    </div>
+  </div>
 </section>
 
 
+<!-- Abstract -->
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
+        <hr>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Humanoid robots have shown success in locomotion and manipulation. Despite these basic abilities, humanoids are
+            still required to quickly understand human instructions and react
+            based on human interaction signals to become valuable assistants
+            in human daily life. Unfortunately, most existing works only
+            focus on multi-stage interactions, treating each task separately,
+            and neglecting real-time feedback. In this work, we aim to
+            empower humanoid robots with real-time reaction abilities to
+            achieve various tasks, allowing human to interrupt robots at any
+            time, and making robots respond to humans immediately. To
+            support such abilities, we propose a general humanoid-human-
+            object interaction framework, named RHINO, i.e., Real-time
+            Humanoid-human Interaction and Object manipulation. RHINO
+            provides a unified view of reactive motion, instruction-based
+            manipulation, and safety concerns, over multiple human signal
+            modalities, such as languages, images, and motions. RHINO is a
+            hierarchical learning framework, enabling humanoids to learn
+            reaction skills from human-human-object demonstrations and
+            teleoperation data. In particular, it decouples the interaction
+            process into two levels: 1) a high-level planner inferring human
+            intentions from real-time human behaviors; and 2) a low-level
+            controller achieving reactive motion behaviors and object manip-
+            ulation skills based on the predicted intentions. We evaluate the
+            proposed framework on a real humanoid robot and demonstrate
+            its effectiveness, flexibility, and safety in various scenarios.
           </p>
         </div>
+        <br>
+        <h3 class="title is-3" style="text-align: center; margin-bottom: 0px; font-size: x-large;"> Framework </h3>
+        <hr>
+        <img src="static/images/framework.png" width="100%">
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="content has-text-justified">
+        <br>
+        <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Model Architecture </h3>
+        <hr>
+        <img src="static/images/method.png" width="100%">
+        <br>
+        <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Data Source </h3>
+        <hr>
+        <img src="static/images/data_source.png" width="100%">
       </div>
     </div>
     <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
   </div>
 </section>
 
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <!--/ Matting. -->
-
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Concurrent Work. -->
-
-  </div>
-</section>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{xxxxxx,
+  author    = {Chen*, Jingxiao and Li*, Xinyao and Cao*, Jiahang and Zhu, Zhengbang and Dong, Wentao and Liu, Minghuan and Wen, Ying and Yu, Yong and Zhang, Liqing and Zhang, Weinan},
+  title     = {RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations},
+  year      = {2025},
 }</code></pre>
   </div>
 </section>
@@ -458,10 +516,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="./static/videos/RHINO.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://google.com" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -469,16 +527,8 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+             Thanks to <a rel="license"
+             href="http://creativecommons.org/licenses/by-sa/4.0/">Nerfies</a> for the website template.
           </p>
         </div>
       </div>
