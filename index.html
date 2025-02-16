@@ -38,7 +38,36 @@
   <script src="./static/js/index.js"></script>
 </head>
 <body>
-
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu">
+      <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+        <a class="navbar-item" href="">
+        <span class="icon">
+            <i class="fas fa-home"></i>
+        </span>
+        </a>
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link">
+            Related Research
+          </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://hugwbc.github.io/">
+              LowerBody Control: HugWBC
+            </a>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+</nav>
 
 <section class="hero">
   <div class="hero-body">
@@ -46,49 +75,49 @@
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">RHINO: </h1>
-          <h1 class="title is-1 publication-title">Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations</h1>
-          <div class="is-size-5 publication-authors">
+          <h1 class="title is-1 publication-title" style="font-weight: normal;">Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations</h1>
+          <div class="is-size-4 publication-authors">
             <span class="author-block">
-              <a href="https://timerchen.github.io">Jingxiao Chen</a><sup>*</sup>,</span>
+              <a href="https://timerchen.github.io">Jingxiao Chen</a><sup>*</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://github.com/lixinyao11">Xinyao Li</a><sup>*</sup>,</span>
+              <a href="https://github.com/lixinyao11">Xinyao Li</a><sup>*</sup></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://scholar.google.com/citations?&user=ofpwpDYAAAAJ">Jiahang Cao</a><sup>*</sup>,
-            </span>
+              <a href="https://scholar.google.com/citations?&user=ofpwpDYAAAAJ">Jiahang Cao</a><sup>*</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://zbzhu99.github.io/">Zhengbang Zhu</a>,
-            </span>
+              <a href="https://zbzhu99.github.io/">Zhengbang Zhu</a>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://github.com/WentDong">Wentao Dong</a>,
-            </span>
+              <a href="https://github.com/WentDong">Wentao Dong</a>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
             <span class="author-block">
-              <a href="https://minghuanliu.com/">Minghuan Liu</a><sup>†</sup>,
-            </span>
+              <a href="https://minghuanliu.com/">Minghuan Liu</a><sup>†</sup>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://yingwen.io/">Ying Wen</a>,
-            </span>
+              <a href="https://yingwen.io/">Ying Wen</a>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://apex.sjtu.edu.cn/members/yyu">Yong Yu</a>,
-            </span>
+              <a href="https://apex.sjtu.edu.cn/members/yyu">Yong Yu</a>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
-              <a href="https://bcmi.sjtu.edu.cn/~zhangliqing/">Liqing Zhang</a>,
-            </span>
+              <a href="https://bcmi.sjtu.edu.cn/~zhangliqing/">Liqing Zhang</a>
+            </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <span class="author-block">
               <a href="https://wnzhang.net/">Weinan Zhang</a>
             </span>
           </div>
+          <!-- <br> -->
 
-          <div class="is-size-5 publication-authors">
-            <!-- <span class="author-block"><sup>1</sup>Shanghai Jiao Tong University,</span>
-            <span class="author-block"><sup>2</sup>ByteDance Seed</span> -->
+          <!-- <div class="is-size-4 publication-authors">
             <span class="author-block">Shanghai Jiao Tong University</span>
-          </div>
+          </div> -->
 
-          <div class="is-size-6 publication-authors">
+          <div class="is-size-4 publication-authors">
             <span class="author-block">* Equal Contribution</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <span class="author-block">† project lead</span>
+            <span class="author-block">† Project Lead</span>
           </div>
-          <br>
+          <!-- <br> -->
           <img src="./static/images/sjtu_logo.png" width="40%" style="margin-right: 20px;"> 
           <img src="./static/images/apex_logo_final2.png" width="30%" style="margin-right: 0;"> 
           <br>
@@ -200,8 +229,8 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Humanoid-Human-Object Interaction</h2>
-        <hr>
-        <!-- <tr>
+        <!-- <hr>
+        <tr>
           <td>
               <h2 class="subtitle">
                   The robot is able to climb stairs upto 24cm high and only 30cm wide while climbing curbs upto 26cm high. Our policy generalizes to different stairs and curbs under a variety of lighting conditions. On out-of-distribution stairs and curbs, the robot initially gets stuck but is eventually able to traverse them using an emergent climbing up behavior.   
@@ -220,26 +249,35 @@
               </div>
             </div>
             <br>
-          
+            <div class="row">
+              <div class="col">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Long-Horizon Planning</h3>
+                  <video muted="" autoplay loop="" playsinline="" controls="" src="./static/videos/web_scene3.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> In-task Real-Time Interruption</h3>
+                <video muted="" autoplay loop="" playsinline="" controls="" src="./static/videos/web_in_task.mp4" width="100%" style="border-radius:10px; "></video>
+              </div>
+            </div>
       </div> 
     </div>
   </div>
 </section>
 
 <!-- Long-Time Planning -->
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Long-Time Planning</h2>
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Long-Horizon Planning</h2>
         <hr>
-        <!-- <tr>
+        <tr>
           <td>
               <h2 class="subtitle">
                   The robot is able to climb stairs upto 24cm high and only 30cm wide while climbing curbs upto 26cm high. Our policy generalizes to different stairs and curbs under a variety of lighting conditions. On out-of-distribution stairs and curbs, the robot initially gets stuck but is eventually able to traverse them using an emergent climbing up behavior.   
               </h2>
           </td>
-        </tr> -->
+        </tr>
           
             <div class="row">
               <div class="col" style="text-align: center;">
@@ -251,7 +289,7 @@
       </div> 
     </div>
   </div>
-</section>
+</section> -->
 
 
 <!-- <section class="hero is-light is-small">
@@ -317,15 +355,15 @@
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Safe Supervision</h2>
-        <hr>
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Safety Ensurance</h2>
+        <!-- <hr>
         <tr>
           <td>
               <h2 class="subtitle">
                   The robot is able to detect unsafe human behaviors and pause the task execution to ensure safety.
               </h2>
           </td>
-        </tr>
+        </tr> -->
         
           
             <div class="row">
@@ -345,11 +383,11 @@
 </section>
 
 <!-- Intask interrupt -->
-<section class="section">
+<!-- <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">In-task Interruption</h2>
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">In-task Real-Time Interruption</h2>
         <div>
         </div>
         <hr>
@@ -373,50 +411,22 @@
       </div> 
     </div>
   </div>
-</section>
-
-<!-- v.s. E2E -->
-<section class="section">
-  <div class="container">
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Comparison to End-to-end Model</h2>
-        <hr>
-        <tr>
-          <td>
-              <h2 class="subtitle">
-                Our framework outperforms the end-to-end model for unseen human clothing or unexpected object arrangement.
-              </h2>
-          </td>
-        </tr>
-        <p class="text-center">
-            <div class="row">
-              <div class="col">
-                <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_e2e.mp4" width="100%" style="border-radius:10px; "></video>
-              </div>
-            </div>
-            <br>
-          
-        
-      </div> 
-    </div>
-  </div>
-</section>
+</section> -->
 
 <!-- Generalize to humanoids interaction -->
 <section class="section">
   <div class="container">
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Generalization: Humanoids Interaction</h2>
-        <hr>
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Generalizes to Interaction between Humanoids</h2>
+        <!-- <hr>
         <tr>
           <td>
               <h2 class="subtitle">
                 Our framework has potential to generalize and interact with humanoid robots.
               </h2>
           </td>
-        </tr>
+        </tr> -->
         
           
             <div class="row">
@@ -438,6 +448,34 @@
   </div>
 </section>
 
+<!-- v.s. E2E -->
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Outperforms End-to-End Model</h2>
+        <!-- <hr>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                Our framework outperforms the end-to-end model for unseen human clothing or unexpected object arrangement.
+              </h2>
+          </td>
+        </tr> -->
+        <p class="text-center">
+            <div class="row">
+              <div class="col" style="text-align: center;">
+                <video autoplay="" muted="" loop="" playsinline="" controls="" src="./static/videos/web_e2e.mp4" width="70%" style="border-radius:10px; "></video>
+              </div>
+            </div>
+            <br>
+          
+        
+      </div> 
+    </div>
+  </div>
+</section>
+
 
 <!-- Abstract -->
 <section class="section">
@@ -445,7 +483,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-2">Abstract</h2>
         <hr>
         <div class="content has-text-justified">
           <p>
@@ -475,22 +513,23 @@
             its effectiveness, flexibility, and safety in various scenarios.
           </p>
         </div>
-        <br>
-        <h3 class="title is-3" style="text-align: center; margin-bottom: 0px; font-size: x-large;"> Framework </h3>
         <hr>
-        <img src="static/images/framework.png" width="100%">
+        <!-- <br> -->
       </div>
     </div>
 
     <div class="columns is-centered">
       <div class="content has-text-justified">
+        <h2 class="title is-2" style="text-align: center;"> Framework </h2>
+        <!-- <hr> -->
+        <img src="static/images/framework.png" width="100%">
         <br>
-        <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Model Architecture </h3>
-        <hr>
+        <h3 class="title is-2" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Model Architecture </h3>
+        <!-- <hr> -->
         <img src="static/images/method.png" width="100%">
         <br>
-        <h3 class="title is-3" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Data Source </h3>
-        <hr>
+        <h3 class="title is-2" style="text-align: center; margin-bottom: 10px; font-size: x-large;"> Data Source </h3>
+        <!-- <hr> -->
         <img src="static/images/data_source.png" width="100%">
       </div>
     </div>
@@ -503,7 +542,7 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{xxxxxx,
+    <pre><code>@article{rhino2025chen,
   author    = {Chen*, Jingxiao and Li*, Xinyao and Cao*, Jiahang and Zhu, Zhengbang and Dong, Wentao and Liu, Minghuan and Wen, Ying and Yu, Yong and Zhang, Liqing and Zhang, Weinan},
   title     = {RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations},
   year      = {2025},
@@ -513,7 +552,7 @@
 
 
 <footer class="footer">
-  <div class="container">
+  <!-- <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
          href="./static/videos/RHINO.pdf">
@@ -522,13 +561,13 @@
       <a class="icon-link" href="https://google.com" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
-    </div>
+    </div> -->
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-             Thanks to <a rel="license"
-             href="http://creativecommons.org/licenses/by-sa/4.0/">Nerfies</a> for the website template.
+            Website based on <a rel="license"
+             href="http://creativecommons.org/licenses/by-sa/4.0/">Nerfies</a> template.
           </p>
         </div>
       </div>
