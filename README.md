@@ -1,14 +1,13 @@
-# Nerfies
+# RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [website](https://humanoid-interaction.github.io/).
 
-If you find Nerfies useful for your work please cite:
+If you find our work useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{rhino2025chen,
+  author    = {Chen*, Jingxiao and Li*, Xinyao and Cao*, Jiahang and Zhu, Zhengbang and Dong, Wentao and Liu, Minghuan and Wen, Ying and Yu, Yong and Zhang, Liqing and Zhang, Weinan},
+  title     = {RHINO: Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations},
+  year      = {2025},
 }
 ```
 

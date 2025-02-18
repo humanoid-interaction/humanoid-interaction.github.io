@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
@@ -32,7 +31,7 @@
   <link rel="icon" href="./static/images/icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="https://kit.fontawesome.com/400f37ca2f.js" crossorigin="anonymous"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
@@ -74,7 +73,10 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">RHINO: </h1>
+            <h1 class="title is-1 publication-title">
+            <img src="./static/images/rhino_icon.png" alt="RHINO Icon" style="vertical-align: middle; margin-right: 10px; width: auto; height: 50px;">
+            RHINO:
+            </h1>
           <h1 class="title is-1 publication-title" style="font-weight: normal;">Learning Real-Time Humanoid-Human-Object Interaction from Human Demonstrations</h1>
           <div class="is-size-4 publication-authors">
             <span class="author-block">
@@ -162,17 +164,34 @@
                   <span>Code</span>
                   </a>
               </span>
+              <!-- Bilibili Link. -->
+              <span class="link-block">
+                <a href="https://google.com" class="external-link button is-normal is-rounded is-dark" target="_blank"style="pointer-events: none; color: grey;">
+                    <span class="icon">
+                      <i class="fa-brands fa-bilibili" aria-hidden="true"></i>
+                    </span>
+                    <span>Bilibili</span>
+                </a>
+              </span>
               <!-- Dataset Link. -->
               <span class="link-block">
                 <a href="https://google.com"
                    class="external-link button is-normal is-rounded is-dark" style="pointer-events: none; color: grey;">
                   <span class="icon">
-                      <i class="fa fa-database"></i>
+                      <i class="fa fa-database" aria-hidden="true"></i>
                   </span>
                   <span>Dataset</span>
                   </a>
-
               </span>
+              <span class="link-block">
+                <a href="https://google.com" target="_blank" class="external-link button is-normal is-rounded is-dark" style="pointer-events: none; color: grey;">
+                  <span class="icon">
+                      <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+                  </span>
+                  <span>Summary</span>
+                </a>
+              </span>
+              
               <!-- <div class="col-auto" style="padding: 0 1px;">
                 <p class="mb-5"><a class="btn btn-large btn-light" href="javascript:void(0);" role="button" style="pointer-events: none; color: grey;">
                     <i class="fa fa-database"></i> Dataset</a></p>
@@ -566,8 +585,7 @@
       <div class="column is-8">
         <div class="content">
           <p>
-            Website based on <a rel="license"
-             href="http://creativecommons.org/licenses/by-sa/4.0/">Nerfies</a> template.
+            Website based on <a href="https://nerfies.github.io/">Nerfies</a> template.
           </p>
         </div>
       </div>
